@@ -7,7 +7,7 @@ permalink:        "/:title"
 relative_permalinks: true
 
 # Setup
-title:            Hyde
+title:            Oskar Klintrot
 tagline:          'Homepage of Oskar Klintrot'
 description:      'Still working on it...'
 url:              http://oskarklintrot.github.io/
