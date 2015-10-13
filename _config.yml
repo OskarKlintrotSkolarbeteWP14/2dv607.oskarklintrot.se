@@ -7,9 +7,9 @@ permalink:        "/:title"
 relative_permalinks: true
 
 # Setup
-title:            Oskar Klintrot
+title:            Klintrot
 tagline:          'Homepage of Oskar Klintrot'
-description:      'Still working on it...'
+description:      'Oskar Klintrot'
 url:              http://oskarklintrot.github.io/
 baseurl:          /
 
