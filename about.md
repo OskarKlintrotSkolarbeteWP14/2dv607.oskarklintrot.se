@@ -5,27 +5,10 @@ permalink: about/
 ---
 
 <p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
+  Home of Oskar Klintrot
 </p>
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+This will be my website where I host my blog and maybe also some photos later on. It won't be updated frequently, if at all. The reason I have created this blog is because we only have an [finite number of keystrokes left before I die](http://keysleft.com/). So if I, against all odds, do come up with something to share I will post it here and give that link to whom may want it. If that's you, great! If not, glad you visited my little corner of the web anyway. I'm flattered. So who ever you are, welcome to my webpage full of ~~wisdome~~ ~~typos~~ keystrokes!
 
-There are currently two themes built on Poole:
-
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
-
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+Yours sincerely,
+Oskar Klintrot
