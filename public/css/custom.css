@@ -1,0 +1,9 @@
+.line-separator{
+  height:1px;
+  border-bottom:1px solid;
+  border-color: lightgrey;
+}
+
+.post-author {
+  padding-bottom: 30px;
+}
