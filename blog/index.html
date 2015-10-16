@@ -21,6 +21,7 @@ title: Home
     {% endif %}
     {% endcomment %}
     
+    {% comment %}
     {% if post.content | split:'<!--break-->' contains '<p class="signature">' %}
       {{ post.content | split:'<p class="signature">' | first }}
     {% else %}
@@ -29,6 +30,22 @@ title: Home
         <a href="{{ post.url }}">Read more...</a>
       {% endif %}
     {% endif %}
+    {% endcomment %}
+    
+    
+    
+    {% if post.content contains '<!--break-->' %}
+      {{ post.content | split:'<!--break-->' | first }}
+      {% if post.content contains '<!--break-->' %}
+        <a href="{{ post.url }}">Read more...</a>
+      {% endif %}
+    {% else %}
+      {{ post.content | split:'<p class="signature">' | first }}
+    {% endif %}
+    
+    
+    
+    
     
   </div>
   <div class="line-separator"></div>
