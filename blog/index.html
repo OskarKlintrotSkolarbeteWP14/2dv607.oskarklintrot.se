@@ -16,7 +16,7 @@ title: Home
 
     {{ post.content | split:'<!--break-->' | first }}
     {% if post.content contains '<!--break-->' %}
-      <a href="{{ site.baseurl }}{{ post.url }}">Read more...</a>
+      <a href="{{ {{ site.baseurl }}{{ post.url }} | replace: '//', '/'}}">Read more...</a>
     {% endif %}
   </div>
   {% endfor %}
