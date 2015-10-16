@@ -14,13 +14,22 @@ title: Home
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
+    {% comment %}
     {{ post.content | split:'<!--break-->' | first }}
     {% if post.content contains '<!--break-->' %}
       <a href="{{ post.url }}">Read more...</a>
     {% endif %}
-    {% if post.content contains '<p class="signature">' %}
-      <p>No signature!</p>
+    {% endcomment %}
+    
+    {% if post.content | split:'<!--break-->' contains '<p class="signature">' %}
+      {{ post.content | split:'<p class="signature">' | first }}
+    {% else %}
+      {{ post.content | split:'<!--break-->' | first }}
+      {% if post.content contains '<!--break-->' %}
+        <a href="{{ post.url }}">Read more...</a>
+      {% endif %}
     {% endif %}
+    
   </div>
   <div class="line-separator"></div>
   <div class="post-author">{{ site.author.name }}</div>
