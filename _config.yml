@@ -12,7 +12,7 @@ tagline:          'Homepage of Oskar Klintrot'
 description:      'CS Student'
 url:              http://oskarklintrot.github.io/myblog
 baseurl:          "/"
-blog_path:        "../blog/"
+blog_path:        "blog"
 
 author:
   name:           'Oskar Klintrot'
