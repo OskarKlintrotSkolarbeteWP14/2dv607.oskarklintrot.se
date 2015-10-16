@@ -19,6 +19,8 @@ title: Home
       <a href="{{ post.url }}">Read more...</a>
     {% endif %}
   </div>
+  <div class="line-separator"></div>
+  <div class="post-author">{{ site.author.name }} {{ post.date | date_to_string }}</div>
   {% endfor %}
 </div>
 
