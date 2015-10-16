@@ -13,26 +13,6 @@ title: Home
     </h1>
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {% comment %}
-    {{ post.content | split:'<!--break-->' | first }}
-    {% if post.content contains '<!--break-->' %}
-      <a href="{{ post.url }}">Read more...</a>
-    {% endif %}
-    {% endcomment %}
-    
-    {% comment %}
-    {% if post.content | split:'<!--break-->' contains '<p class="signature">' %}
-      {{ post.content | split:'<p class="signature">' | first }}
-    {% else %}
-      {{ post.content | split:'<!--break-->' | first }}
-      {% if post.content contains '<!--break-->' %}
-        <a href="{{ post.url }}">Read more...</a>
-      {% endif %}
-    {% endif %}
-    {% endcomment %}
-    
-    
     
     {% if post.content contains '<!--break-->' %}
       {{ post.content | split:'<!--break-->' | first }}
@@ -42,10 +22,6 @@ title: Home
     {% else %}
       {{ post.content | split:'<p class="signature">' | first }}
     {% endif %}
-    
-    
-    
-    
     
   </div>
   <div class="line-separator"></div>
