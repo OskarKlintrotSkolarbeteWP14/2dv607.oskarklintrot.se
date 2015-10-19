@@ -28,7 +28,14 @@ title: Home
       {{ post.content | truncatewords: 50  | remove: '</p>'}}
       <a href="{{ post.url }}"> Read more...</a></p>
     {% else %}
-      {{ post.content | split:'<p class="signature">' | first }}
+      {% if post.content contains '<span class="break" />' %}
+        {{ post.content | split:'<span class="break" />' | first }}
+        {% if post.content contains '<span class="break" />' %}
+          <p><a href="{{ post.url }}">Read more...</a></p>
+        {% endif %}
+      {% else %}
+        {{ post.content | split:'<p class="signature">' | first }}
+      {% endif %}
     {% endif %}
     
     {% comment %}
