@@ -14,7 +14,12 @@ title: Home
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
     
-    {{ post.excerpt }}
+    {% if post.description %}
+      {{ post.description }}
+      <p><a href="{{ post.url }}">Read more...</a></p>
+    {% else %}
+      {{ post.content | split:'<p class="signature">' | first }}
+    {% endif %}
     
     {% comment %}
     {% if post.content contains '<span class="break" />' %}
