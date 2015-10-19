@@ -5,5 +5,5 @@ comments: True
 ---
 Welcome to this blog! This is my first post!
 
-{% include plug_twitter.html %}  
-{% include plug_signature.html %}  
+{% include plugs/twitter.html %}  
+{% include plugs/signature.html %}  
