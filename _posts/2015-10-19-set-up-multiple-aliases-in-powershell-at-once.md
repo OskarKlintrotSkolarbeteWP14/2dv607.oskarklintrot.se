@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Set up multiple aliases in powershell at once
+title: Set up multiple aliases in Powershell at once
 comments: True
 ---
 Using the command-line in Windows used to be a horrible experience compared to *nix. Now days though Windows PowerShell is a really nice command-line shell, especially i Windows 10. The shell's in Windows (thats PS and of course the good ol' cmd.exe) works in another way than in *nix. <!--break-->In Windows they treat everything as objects while in *nix they treat everything as a file. Both have their pro's and cons but I'm not the right person to dig into that. Instead I will show you how I use small scripts for my most used commands.  
