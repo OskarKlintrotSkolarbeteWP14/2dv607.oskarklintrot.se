@@ -48,5 +48,5 @@ It takes the first argument as the commit and if it has a second argument that i
 
 Hope you learned something new!
 
-{% include plugs/twitter.html %}  
-{% include plugs/signature.html %}
+{% include /plugs/twitter.html %}  
+{% include /plugs/signature.html %}
