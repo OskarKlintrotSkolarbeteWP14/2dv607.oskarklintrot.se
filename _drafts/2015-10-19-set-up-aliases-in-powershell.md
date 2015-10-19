@@ -11,3 +11,4 @@ ForEach ($file in $files) {
 }```
 This scripts takes all files from `C:\Users\Oskar\Documents\WindowsPowerShell\myScripts` that ends with `.ps1`, which is a PS-script file, and sets aliases to the script file (`$file.FullName` gives back a string with the name and path to the file). The alias name of the file, `$file.BaseName`, becomes the alias for the script.
 ## Lets see a script!
+asdas
