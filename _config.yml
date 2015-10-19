@@ -3,7 +3,7 @@ markdown:         redcarpet
 highlighter:      pygments
 
 # Permalinks
-permalink:        "{{ site.blogurl }}/:title"
+permalink:        "/:title"
 relative_permalinks: true
 
 # Setup
@@ -12,7 +12,6 @@ tagline:          'Homepage of Oskar Klintrot'
 description:      'CS Student'
 url:              http://oskarklintrot.se
 baseurl:          "/"
-blogurl:        "blog"
 
 author:
   name:           'Oskar Klintrot'
