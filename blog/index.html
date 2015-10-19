@@ -26,7 +26,7 @@ title: Home
       <p><a href="{{ post.url }}"> Read more...</a></p>
     {% elsif post.content.size > 500 %}
       {{ post.content | truncatewords: 50  | remove: '</p>'}}
-      <a href="{{ post.url }}"> Read more...</a></p>
+      <a href="{{ post.url }}"> Read more!</a></p>
     {% else %}
       {% if post.content contains '<span class="break" />' %}
         {{ post.content | split:'<span class="break" />' | first }}
