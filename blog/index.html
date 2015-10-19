@@ -24,8 +24,8 @@ title: Home
     {% elsif post.excerpt.size > 0 %}
       {{ post.excerpt }}
       <p><a href="{{ post.url }}">Read more...</a></p>
-    {% elsif post.content.size > 100 %}
-      {{ post.excerpt }}
+    {% elsif post.content.size > 1000 %}
+      {{ post.content | truncatewords: 100 }}
       <p><a href="{{ post.url }}">Read more...</a></p>
     {% else %}
       {{ post.content | split:'<p class="signature">' | first }}
