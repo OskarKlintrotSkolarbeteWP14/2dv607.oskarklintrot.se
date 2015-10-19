@@ -7,5 +7,5 @@ Welcome to this blog! This is my first post!
 
 {% comment %}  
 {% include plug_twitter.html %}  
-{% include plug_signature.html %} 
+{% include plug_signature.html %}  
 {% endcomment %}  
