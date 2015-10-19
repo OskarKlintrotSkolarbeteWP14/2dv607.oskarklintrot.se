@@ -21,6 +21,9 @@ paginate:         5
 paginate_path:    "blog/page:num/"
 blog_path:        "blog/"
 
+# Posts
+excerpt_separator: <!--break-->
+
 # Custom vars
 version:          2.1.0
 
