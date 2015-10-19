@@ -14,9 +14,9 @@ title: Home
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
     
-    {% if post.content contains '<!--break-->' %}
-      {{ post.content | split:'<!--break-->' | first }}
-      {% if post.content contains '<!--break-->' %}
+    {% if post.content contains '<span class="break" />' %}
+      {{ post.content | split:'<span class="break" />' | first }}
+      {% if post.content contains '<span class="break" />' %}
         <p><a href="{{ post.url }}">Read more...</a></p>
       {% endif %}
     {% else %}
