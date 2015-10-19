@@ -21,12 +21,9 @@ title: Home
     {% if post.description.size > 0 %}
       {{ post.description }}
       <p><a href="{{ post.url }}">Read more...</a></p>
-    {% elsif post.excerpt.size > 0 %}
-      {{ post.excerpt }}
-      <p><a href="{{ post.url }}">Read more...</a></p>
-    {% elsif post.content.size > 1000 %}
-      {{ post.content | truncatewords: 100 }}
-      <p><a href="{{ post.url }}">Read more...</a></p>
+    {% elsif post.content.size > 500 %}
+      {{ post.content | truncatewords: 50  | remove "</p>"}}
+      <a href="{{ post.url }}"> Read more...</a></p>
     {% else %}
       {{ post.content | split:'<p class="signature">' | first }}
     {% endif %}
