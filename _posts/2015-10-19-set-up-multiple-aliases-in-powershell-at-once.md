@@ -2,7 +2,7 @@
 layout: post
 title: Set up multiple aliases in Powershell at once
 comments: True
-category: tech
+category: Tech
 tags: [Powershell, Scripting]
 description: In this article we will take a look at how we can make some scripts that is automaticly added as alias in Powershell. This way we can automate stuff that we do a lot and keep everything super simple to maintain.
 ---
