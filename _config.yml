@@ -29,3 +29,10 @@ version:          2.1.0
 
 github:
   repo:           https://github.com/OskarKlintrot/oskarklintrot.se
+  
+# Page to be shown in the sidebar
+pages_list:
+  About: '/about'
+  My blog: '/blog'
+  Archive: '/archive'
+  Feed: '/atom.xml'
