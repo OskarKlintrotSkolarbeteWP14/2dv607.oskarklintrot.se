@@ -30,7 +30,7 @@ description: "An archive of posts sorted by tag."
 </div>
 
 <h3>Tag Cloud</h3>
-{% assign tags = site.tags | sort %}
+{% assign tags = site_tags | sort %}
 {% for tag in tags %}
  <span class="site-tag">
     <a href="/tags/#{{ tag | first | slugify }}"
