@@ -2,6 +2,7 @@
 layout: page
 title: Tags
 permalink: tags/
+custom_css: tags
 description: "An archive of posts sorted by tag."
 ---
 
