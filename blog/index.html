@@ -18,7 +18,7 @@ title: Home
     <p>post.excerpt.size; {{ post.excerpt.size }}</p>
     <p>post.content.size; {{ post.content.size }}</p>
     
-    {% if post.description.size > 0 %}
+    {% if post.description.size < 0 %}
       Description: 
       {{ post.description }}
       <p><a href="{{ post.url }}">Read more...</a></p>
