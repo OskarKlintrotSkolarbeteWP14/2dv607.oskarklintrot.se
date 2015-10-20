@@ -12,7 +12,7 @@ title: Home
       </a>
     </h1>
 
-    <span class="post-date">{{ post.date | date_to_string }} Tags: {% include tags/frontpage.html | remove "<p>" | remove "</p>" %}</span>
+    <span class="post-date">{{ post.date | date_to_string }} {{ {% include tags/frontpage.html %}  | remove "<p>" | remove "</p>" }}</span>
 
     {% if post.description.size > 0 %}
       {{ post.description }}
