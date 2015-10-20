@@ -3,4 +3,6 @@ window.onload = function () {
     placement: "left"
   }
   anchors.add().remove('h1');
+  anchors.remove('#related-posts');
+  anchors.remove('.related-posts > li > h3');
 }
