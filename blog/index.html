@@ -20,7 +20,7 @@ title: Home
     {% elsif post.content contains '<span class="break" />' %}
       {{ post.content | split:'<span class="break" />' | first }}
       <p><a href="{{ post.url }}">Read more...</a></p>
-    {% elsif post.excerpt.size < 500 AND  post.excerpt.size > 100 %}
+    {% elsif post.excerpt.size < 500 AND post.excerpt.size > 100 %}
       {{ post.excerpt | split:'<p class="signature">' | first }}
       <p><a href="{{ post.url }}"> Read more...</a></p>
     {% elsif post.content.size > 500 %}
