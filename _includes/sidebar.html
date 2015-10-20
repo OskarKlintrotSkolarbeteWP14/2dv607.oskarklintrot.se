@@ -31,7 +31,7 @@
           <a class="sidebar-nav-item{% if page.url == page[1] %} active{% endif %}" href="{{ page[1] }}">{{ page[0] }}</a>
         {% endfor %}
         
-        <a class="sidebar-nav-item" href="/blog">My blog</a>
+        <a class="sidebar-nav-item {% if page.url == "/blog" %} active{% endif %}" href="/blog">My blog</a>
         <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
         <span class="sidebar-nav-item">Built with <a href="https://github.com/poole/hyde">Poole</a> v{{ site.version }}</span>
       </nav>
