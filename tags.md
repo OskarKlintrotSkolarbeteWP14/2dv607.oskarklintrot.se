@@ -29,7 +29,7 @@ description: "An archive of posts sorted by tag."
   {% endunless %}{% endfor %}
 </div>
 
-<h1>Tag Cloud</h1>
+<h3>Tag Cloud</h3>
 {% assign tags = site.tags | sort %}
 {% for tag in tags %}
  <span class="site-tag">
