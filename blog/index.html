@@ -14,19 +14,19 @@ title: Home
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
-    {% if post.description.size > 0 %} #Use description if there is one
+    {% if post.description.size > 0 %} {% comment %}Use description if there is one{% endcomment %}
       {{ post.description }}
       <p><a href="{{ post.url }}">Read more...</a></p>
-    {% elsif post.content contains '<span class="break" />' %} #Break at the break if there is one
+    {% elsif post.content contains '<span class="break" />' %} {% comment %}Break at the break if there is one{% endcomment %}
       {{ post.content | split:'<span class="break" />' | first }}
       <p><a href="{{ post.url }}">Read more...</a></p>
-    {% elsif post.excerpt.size < 500 AND  post.excerpt.size > 100 %} #Use excerpt, but not if it's too small
+    {% elsif post.excerpt.size < 500 AND  post.excerpt.size > 100 %} {% comment %}Use excerpt, but not if it's too small{% endcomment %}
       {{ post.excerpt | split:'<p class="signature">' | first }}
       <p><a href="{{ post.url }}"> Read more...</a></p>
-    {% elsif post.content.size > 500 %} #If it's a long post, truncate it
+    {% elsif post.content.size > 500 %} {% comment %}If it's a long post, truncate it{% endcomment %}
       {{ post.content | truncatewords: 50  | remove: '</p>'}}
       <a href="{{ post.url }}"> Read more!</a></p>
-    {% else %} #If it's a short post, display whole post but not the signature
+    {% else %} {% comment %}If it's a short post, display whole post but not the signature{% endcomment %}
       {{ post.content | split:'<p class="signature">' | first }}
     {% endif %}
     
