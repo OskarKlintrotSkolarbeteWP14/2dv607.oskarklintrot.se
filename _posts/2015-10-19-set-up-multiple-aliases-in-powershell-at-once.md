@@ -5,7 +5,6 @@ comments: True
 description: In this article we will take a look at how we can make some scripts that is automaticly added as alias in Powershell. This way we can automate stuff that we do a lot and keep everything super simple to maintain.
 ---
 Using the command-line in Windows used to be a horrible experience compared to *nix. Nowdays though Windows PowerShell is a really nice command-line shell, especially in Windows 10. The shell's in Windows (thats PS and of course the good old cmd.exe) works in another way than in *nix. In Windows they treat everything as objects while in *nix they treat everything as a file. Both have their pro's and cons but I'm not the right person to dig into that. Instead I will show you how I use small scripts for my most used commands.  
-<span class="break" />
 ## Starting to use the command-line, again...
 I've grown to like Powershell more and more since I first started using it. After I gave up Linux for like 5 years ago I thought I would miss the terminal. I didn't. However, now I'm studing web development and I'm now using the Powershell for some tasks, as working with git and vagrant. I still prefer a nice GUI but I guess *nix users haven't got enough powerful computers just yet. Jokes beside, the command-line is a great tool for some tasks and I have made some scripts for my most used commands.
 ## Using scripts in the everyday life as an developer
