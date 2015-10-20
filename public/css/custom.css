@@ -16,3 +16,7 @@ a.anchorjs-link {
   color: #8E8E8E;
   text-decoration: none;
 }
+
+a.anchorjs-link:hover {
+  color: #444444;
+}
