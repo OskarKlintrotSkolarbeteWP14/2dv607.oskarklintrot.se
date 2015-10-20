@@ -19,18 +19,23 @@ title: Home
     <p>post.content.size; {{ post.content.size }}</p>
     
     {% if post.description.size > 0 %}
+      Description: 
       {{ post.description }}
       <p><a href="{{ post.url }}">Read more...</a></p>
     {% elsif post.content contains '<span class="break" />' %}
+      Break: 
       {{ post.content | split:'<span class="break" />' | first }}
       <p><a href="{{ post.url }}">Read more...</a></p>
     {% elsif post.excerpt.size < 500 %}
+      Excerpt: 
       {{ post.excerpt | split:'<p class="signature">' | first }}
       <p><a href="{{ post.url }}"> Read more...</a></p>
     {% elsif post.content.size > 500 %}
+      Truncate: 
       {{ post.content | truncatewords: 50  | remove: '</p>'}}
       <a href="{{ post.url }}"> Read more!</a></p>
     {% else %}
+      Signature: 
       {{ post.content | split:'<p class="signature">' | first }}
     {% endif %}
     
