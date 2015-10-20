@@ -14,19 +14,19 @@ title: Home
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
-    {% if post.description.size > 0 %} {% comment %}Use description if there is one{% endcomment %}
+    {% if post.description.size > 0 %}
       {{ post.description }}
       <p><a href="{{ post.url }}">Read more...</a></p>
-    {% elsif post.content contains '<span class="break" />' %} {% comment %}Break at the break if there is one{% endcomment %}
+    {% elsif post.content contains '<span class="break" />' %}
       {{ post.content | split:'<span class="break" />' | first }}
       <p><a href="{{ post.url }}">Read more...</a></p>
-    {% elsif post.excerpt.size < 500 AND  post.excerpt.size > 100 %} {% comment %}Use excerpt, but not if it's too small{% endcomment %}
+    {% elsif post.excerpt.size < 500 AND  post.excerpt.size > 100 %}
       {{ post.excerpt | split:'<p class="signature">' | first }}
       <p><a href="{{ post.url }}"> Read more...</a></p>
-    {% elsif post.content.size > 500 %} {% comment %}If it's a long post, truncate it{% endcomment %}
+    {% elsif post.content.size > 500 %}
       {{ post.content | truncatewords: 50  | remove: '</p>'}}
       <a href="{{ post.url }}"> Read more!</a></p>
-    {% else %} {% comment %}If it's a short post, display whole post but not the signature{% endcomment %}
+    {% else %}
       {{ post.content | split:'<p class="signature">' | first }}
     {% endif %}
     
