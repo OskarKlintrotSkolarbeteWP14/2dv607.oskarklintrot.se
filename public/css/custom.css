@@ -20,3 +20,7 @@ a.anchorjs-link {
 a.anchorjs-link:hover {
   color: #444444;
 }
+
+h1 > a:hover {
+  text-decoration: none;
+}
