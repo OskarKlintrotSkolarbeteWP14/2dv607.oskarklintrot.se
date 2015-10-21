@@ -2,9 +2,8 @@
 layout: post
 title: First post
 comments: True
-category: Tech
+blog: Tech, Personal
 ---
 Welcome to this blog! This is my first post!
 
-{% include plugs/twitter.html %}  
 {% include plugs/signature.html %}  

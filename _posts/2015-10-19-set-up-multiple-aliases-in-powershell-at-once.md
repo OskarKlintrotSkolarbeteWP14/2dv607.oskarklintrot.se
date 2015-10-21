@@ -2,7 +2,7 @@
 layout: post
 title: Set up multiple aliases in Powershell at once
 comments: True
-category: Tech
+blog: Tech
 tags: [Powershell, Scripting]
 description: In this article we will take a look at how we can make some scripts that is automaticly added as alias in Powershell. This way we can automate stuff that we do a lot and keep everything super simple to maintain.
 ---
@@ -14,7 +14,7 @@ In the folder `C:\Users\Oskar\Documents\WindowsPowerShell`, where Oskar is my us
  {% highlight powershell %}
 $Path = "C:\Users\Oskar\Documents\WindowsPowerShell\myScripts"
 $files = Get-ChildItem $Path\*.ps1
-ForEach ($file in $files) { 
+ForEach ($file in $files) {
     set-alias $file.BaseName $file.FullName
 }
 {% endhighlight %}
@@ -44,7 +44,7 @@ if ($args[0]) {
 }
 else {
     echo "You have to write a comment to the commit."
-} 
+}
 {% endhighlight %}
 It takes the first argument as the commit and if it has a second argument that is equal to `push` it also pushes the commit directly to github.
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Blog
 ---
 
 <div class="posts">
@@ -17,7 +17,7 @@ title: Home
     {% if post.description.size > 0 %}
       {{ post.description }}
       <p><a href="{{ post.url }}">Read more...</a></p>
-      
+
     {% elsif post.content contains '<span class="break" />' %}
       {{ post.content | split:'<span class="break" />' | first }}
       <p><a href="{{ post.url }}">Read more...</a></p>
@@ -30,7 +30,7 @@ title: Home
     {% else %}
       {{ post.content | split:'<p class="signature">' | first }}
     {% endif %}
-    
+
     {% comment %}
     {% if post.content contains '<span class="break" />' %}
       {{ post.content | split:'<span class="break" />' | first }}
