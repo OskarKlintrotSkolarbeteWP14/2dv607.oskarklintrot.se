@@ -30,6 +30,6 @@ My programming knowledge is the basics in:
 Misc:
 * Modbus (kinda neat, almost no security at all though)
 
-My aim with this course is to rebuild [figurkoder.se](http://figurkoder.se).
+My aim with this course is to rebuild [figurkoder.se](http://figurkoder.se) and host it on GitHub-pages.
 
 {% include plugs/signature.html %}  
