@@ -13,7 +13,7 @@ relative_permalinks: true
 title:            Oskar Klintrot
 tagline:          'Homepage of Oskar Klintrot'
 description:      'CS Student'
-url:              http://oskarklintrot.se
+url:              http://2dv607.oskarklintrot.se
 baseurl:          "/"
 
 author:
@@ -21,8 +21,8 @@ author:
   url:            http://oskarklintrot.se
 
 paginate:         5
-paginate_path:    "blog/page:num/"
-blog_path:        "blog/"
+paginate_path:    "page:num/"
+blog_path:        ""
 
 # Posts
 #excerpt_separator: <!--break-->
@@ -31,4 +31,4 @@ blog_path:        "blog/"
 version:          2.1.0
 
 github:
-  repo:           https://github.com/OskarKlintrot/oskarklintrot.se
+  repo:           https://github.com/OskarKlintrotSkolarbeteWP14/2dv607.oskarklintrot.se
