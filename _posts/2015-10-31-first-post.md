@@ -2,7 +2,6 @@
 layout: post
 title: First post
 comments: True
-blog: Tech, Personal
 ---
 Welcome to this blog! This is my first post!
 
