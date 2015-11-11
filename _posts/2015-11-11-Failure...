@@ -1,0 +1,51 @@
+---
+layout: post
+title: Failure is not an option, have to keep on trying
+tags: [Visual Studio, Windows Register]
+comments: True
+description: My head almost exploded out of frustration today...
+---
+So! The last couple of days I have been working on a little web scraper in node and express using Visual Studio. When combining those two with typescript and Visual Studio you get a really net workflow since Visual Studio builds everything for you, as soon as you save a .ts file it compiles it or if you save the node packege-file it downloads new packages for you. I really grown to like express and typescript. The downside is that when building it before publishing it onto Azure all the nestled npm package folders make's the path to long for Windows (which in it self feels like a bad joke, 16GB of RAM is ok but a path of 260 char, OH MY GOOD I GONNA EXPLODE!!!!). This is easy to solve by using `subst` and attaching it to a virtural drive. However, when that drive goes away and you have a corrupt repo in Visual Studio then Visual Studio goes bananas, as it turned out. The error message on the log is `SetSite failed for package [SccProviderPackage]`. And in VS itself the error message when open TFE is this:
+{% highlight powershell %}
+System.UnauthorizedAccessException: Access is denied. (Exception from HRESULT: 0x80070005 (E_ACCESSDENIED))
+   at System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   at Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(Int32 hr, Int32[] expectedHRFailure)
+   at Microsoft.TeamFoundation.Git.Provider.ServiceProviderExtensionMethods.EnsurePackageLoaded(IServiceProvider serviceProvider, Guid packageGuid)
+   at Microsoft.TeamFoundation.Git.Provider.ServiceProviderExtensionMethods.EnsureSccAndTfPackagesLoaded(IServiceProvider serviceProvider)
+   at Microsoft.TeamFoundation.Git.Provider.Repositories.GitTeamProjectExtendedInfoProvider.set_ServiceProvider(IServiceProvider value)
+   at Microsoft.VisualStudio.TeamFoundation.TeamExplorer.ConnectPage.ConnectPageVS.Initialize(Object sender, PageInitializeEventArgs e)
+   at Microsoft.TeamFoundation.Controls.WPF.TeamExplorer.Framework.TeamExplorerPageHost.Initialize(TeamExplorerPageContext context)
+{% endhighlight %}
+and
+{% highlight powershell %}
+System.UnauthorizedAccessException: Access is denied. (Exception from HRESULT: 0x80070005 (E_ACCESSDENIED))
+   at System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   at Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(Int32 hr, Int32[] expectedHRFailure)
+   at Microsoft.TeamFoundation.Git.Provider.ServiceProviderExtensionMethods.EnsurePackageLoaded(IServiceProvider serviceProvider, Guid packageGuid)
+   at Microsoft.TeamFoundation.Git.Provider.ServiceProviderExtensionMethods.EnsureSccAndTfPackagesLoaded(IServiceProvider serviceProvider)
+   at Microsoft.TeamFoundation.Git.Provider.Repositories.RepositoryListSectionVS.Initialize(Object sender, SectionInitializeEventArgs e)
+   at Microsoft.TeamFoundation.Controls.WPF.TeamExplorer.Framework.TeamExplorerSectionHost.Initialize(Object context)
+{% endhighlight %}
+
+Yeah, thank you very much now I know exactly what to do! Not...
+
+# Trial and error - Fumla och famla
+`Devenv /safemode` makes the first pop up about the error go away, so it's something with the extensions. Removing and reinstall github didn't do anything. But without github the pop up only came once instead of everytime I went to the TFE tab. So, it's something with git/tf. Repairing VS, didn't work. Uninstall and reinstall VS, didn't work. Removing every little temp folder didn't work. So whats left? The register! The one place you don't one anyone to poke on your Windows machine.
+# The solution
+So, after locating the problem after some hours due to the massive uninstall/install process of VS it where time for the register. Finaly there it turned out to be quit an easy solution. First I run {% highlight powershell %}Devenv /setup{% endhighlight %} and that got rid of the pop up. After that I whent into 
+{% highlight powershell %}
+HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\TeamFoundation\GitSourceControl\Repositories
+{% endhighlight %}
+and remove the repro that where broken (in my case the one pointing to `Z:\` and then finally removing this key since that repo where the last used:
+{% highlight powershell %}
+HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\TeamFoundation\GitSourceControl\General\LastUsedRepository
+{% endhighlight %}
+
+Now finally it seams as it would work! Just a whole day of work lost and no one else to blame but myself!
+
+Now I will turn on Tool on the highest volym and try to get some work done. My cohabit is luckily working until 23.00 so she's not gonna complain.
+
+{% include plugs/signature.html %}  
+
+Tune of the day (and where the title comes from):
+<iframe width="420" height="315" src="https://www.youtube.com/embed/J5pY7bOkUqQ" frameborder="0" allowfullscreen></iframe>
