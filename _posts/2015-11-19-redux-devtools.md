@@ -55,7 +55,9 @@ var finaleCreateStore = Redux.compose(
 module.exports = finaleCreateStore(rootReducer,initialState());
 {% endhighlight %}
 
-The source code is of course on [github](https://github.com/oskarklintrot/riastart2015) and you can also check out a working example here: [http://oskarklintrot.github.io/riastart2015/](http://oskarklintrot.github.io/riastart2015/).
+<s>The source code is of course on [github](https://github.com/oskarklintrot/riastart2015) and you can also check out a working example here: [http://oskarklintrot.github.io/riastart2015/](http://oskarklintrot.github.io/riastart2015/).</s>
+
+UPDATE: The source code is now [here](https://github.com/OskarKlintrot/riastart2015/tree/original+devtools) in a different bransch and the [gh-pages example](http://oskarklintrot.github.io/riastart2015/)now have bombs added as of 2015-11-20.
 
 {% include plugs/signature.html %}  
 
