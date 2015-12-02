@@ -106,5 +106,5 @@ I am now at [Step 2: Build a static version in React](https://facebook.github.io
 
 __________
 
-Tune of the day:
+Tune of the day:  
 <iframe width="420" height="315" src="https://www.youtube.com/embed/N_c60Sp7Gtc" frameborder="0" allowfullscreen></iframe>
