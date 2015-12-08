@@ -28,7 +28,7 @@ I created a simple "Master-page" component to make it supersimple to reuse the s
 </div>
 Not much to say here...
 
-  ## Start Page
+<h2>Start Page</h2>
 <div style="display: flex; flex-wrap: wrap; justify-content: space-around; ">
   <img src="https://raw.githubusercontent.com/OskarKlintrotSkolarbeteWP14/2dv607.oskarklintrot.se/gh-pages/public/pics/figurkoder_react_start.gif" alt="React Components Of The App: Start Page">
   <img src="https://raw.githubusercontent.com/OskarKlintrotSkolarbeteWP14/2dv607.oskarklintrot.se/gh-pages/public/pics/screenshots_2015-12-08/startPage.png" alt="React Components Of The App: Start Page">
