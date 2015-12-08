@@ -22,21 +22,21 @@ I created a simple "Master-page" component to make it supersimple to reuse the s
 {% endhighlight %}
 
 ## Menu
-<div style="display: flex; flex-wrap: wrap">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around; ">
   <img src="https://raw.githubusercontent.com/OskarKlintrotSkolarbeteWP14/2dv607.oskarklintrot.se/gh-pages/public/pics/figurkoder_react_menu.gif" alt="React Components Of The App: Menu">
   <img src="https://raw.githubusercontent.com/OskarKlintrotSkolarbeteWP14/2dv607.oskarklintrot.se/gh-pages/public/pics/screenshots_2015-12-08/menu.png" alt="React Components Of The App: Menu">
 </div>
 Not much to say here...
 
-## Start page
-<div style="display: flex; flex-wrap: wrap">
+  ## Start Page
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around; ">
   <img src="https://raw.githubusercontent.com/OskarKlintrotSkolarbeteWP14/2dv607.oskarklintrot.se/gh-pages/public/pics/figurkoder_react_start.gif" alt="React Components Of The App: Start Page">
   <img src="https://raw.githubusercontent.com/OskarKlintrotSkolarbeteWP14/2dv607.oskarklintrot.se/gh-pages/public/pics/screenshots_2015-12-08/startPage.png" alt="React Components Of The App: Start Page">
 </div>
 The components ended up quite the same as in my mock up.
 
 ## Game
-<div style="display: flex; flex-wrap: wrap">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around; ">
 <img src="https://raw.githubusercontent.com/OskarKlintrotSkolarbeteWP14/2dv607.oskarklintrot.se/gh-pages/public/pics/figurkoder_react_game.gif" alt="React Components Of The App: The Game">
 <img src="https://raw.githubusercontent.com/OskarKlintrotSkolarbeteWP14/2dv607.oskarklintrot.se/gh-pages/public/pics/screenshots_2015-12-08/gameNum.png" alt="React Components Of The App: Game Number">
 <img src="https://raw.githubusercontent.com/OskarKlintrotSkolarbeteWP14/2dv607.oskarklintrot.se/gh-pages/public/pics/screenshots_2015-12-08/gameDrop.png" alt="React Components Of The App: Game Dropdown">
@@ -46,7 +46,7 @@ The components ended up quite the same as in my mock up.
 Here the result looks a bit different. I ended up swaping place for the place where the user adjusts the settings and the playground. This way I think it will be a bit nicer UX since the playground will be where it is the most natural place to rest your eyes. The textfields, the dropdown menus and the buttons at the bottom is all components, something I didn't plan for.
 
 ## Result
-<div style="display: flex; flex-wrap: wrap">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around; ">
   <img src="https://raw.githubusercontent.com/OskarKlintrotSkolarbeteWP14/2dv607.oskarklintrot.se/gh-pages/public/pics/figurkoder_react_result.gif" alt="React Components Of The App: The Result">
   <img src="https://raw.githubusercontent.com/OskarKlintrotSkolarbeteWP14/2dv607.oskarklintrot.se/gh-pages/public/pics/screenshots_2015-12-08/result.png" alt="React Components Of The App: The Result">
 </div>
