@@ -9,7 +9,7 @@ In [part 2](/thinking-in-react-pt2/) I made up a plan for what components I need
 
 ## Master
 I created a simple "Master-page" component to make it supersimple to reuse the shared components:
-{% highligth javascript %}
+{% highlight javascript %}
 <Layout fixedHeader>
   <CustomHeader />
   <Menu />
