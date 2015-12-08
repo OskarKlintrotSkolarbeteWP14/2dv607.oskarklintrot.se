@@ -21,7 +21,7 @@ I created a simple "Master-page" component to make it supersimple to reuse the s
 </Layout>
 {% endhighlight %}
 
-## Menu
+<h2>Menu</h2>
 <div style="display: flex; flex-wrap: wrap; justify-content: space-around; ">
   <img src="https://raw.githubusercontent.com/OskarKlintrotSkolarbeteWP14/2dv607.oskarklintrot.se/gh-pages/public/pics/figurkoder_react_menu.gif" alt="React Components Of The App: Menu">
   <img src="https://raw.githubusercontent.com/OskarKlintrotSkolarbeteWP14/2dv607.oskarklintrot.se/gh-pages/public/pics/screenshots_2015-12-08/menu.png" alt="React Components Of The App: Menu">
