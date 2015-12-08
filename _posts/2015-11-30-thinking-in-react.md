@@ -22,6 +22,8 @@ That's it for today!
 
 {% include plugs/signature.html %}  
 
+<strong>Update:</strong> Part 2 is now avalible [here](/thinking-in-react-pt2/).
+
 __________
 
 Tune of the day (dedicated to David Waller):
