@@ -39,7 +39,7 @@ As we all know, [this is how you would illustrate Javascript with a picture](htt
 > This is Javascript. If you put big wheels and a racing stripe on a golf cart, it's still a fucking golf cart.
 
 I think that as of ES2015 this would be a better way to illustrate Javascript:
-> <img src="http://1.bp.blogspot.com/-tPlwR4x3-qg/TWfjU7PQMvI/AAAAAAAAAJQ/rjGgKuM52QM/s1600/jet+fighter.jpg" />
+<img src="http://1.bp.blogspot.com/-tPlwR4x3-qg/TWfjU7PQMvI/AAAAAAAAAJQ/rjGgKuM52QM/s1600/jet+fighter.jpg" />
 
 It's still quite bizarre but it has become high-tech and fun and the language is no longer in the way, it's just there flying low under the radar (pun intended). Jokes beside, I think that just as React (and webpack) solves my issues with front-end development ES2015 solves most of my issues with ES5. I mean, I can import stuff now and don't have to do that bizarre thing to load the js-files in correct order and put everything I want to use in other files on the global namespace. I can't belive modules took that long before they where included. I mean, the C-people realized that in the begining of the 80's and created C++ but it took Javascript another two decades to implement it. And I know I'm mixing up modules and classes and namespaces hej kom och hjälp but the aim is the same with all that stuff.
 
