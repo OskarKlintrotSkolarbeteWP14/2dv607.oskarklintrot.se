@@ -7,7 +7,7 @@ description: On a quest to find the minimal state my app need to have
 ---
 The React part of my app is almost done. There is just one small issue before going on and implementing Redux in it. What I need to know before moving on from my static React app is what state do I actually need?
 
-## What Is Going On?
+## Functionality
 
 <img style="height: auto;
   width: auto;
@@ -17,18 +17,18 @@ The app just goes through an array and displays two values ("C" and "Chokladtår
 
 {% highlight Javascript %}
 state = {
-  data = [],
-  hidden = false
+  data: [],
+  hidden: false
 }
 {% endhighlight %}
 
-Since we can start, pause and stop the game I think we need a property for that as well, we can call it gameStatus:
+Since we can start, pause and stop the game I think we need a property for that as well, we can call it status:
 
 {% highlight Javascript %}
 state = {
-  data = [],
-  hidden = false,
-  gameStatus = "start"
+  data: [],
+  hidden: false,
+  status: "start"
 }
 {% endhighlight %}
 
@@ -36,10 +36,10 @@ The timer that changes value needs to know what the interval should be and I thi
 
 {% highlight Javascript %}
 state = {
-  data = [],
-  hidden = false,
-  gameStatus = "start",
-  interval = 6
+  data: [],
+  hidden: false,
+  status: "start",
+  interval: 6
 }
 {% endhighlight %}
 
@@ -47,20 +47,38 @@ If the user want's to learn the mnemomic images then they should be looped and i
 
 {% highlight Javascript %}
 state = {
-  data = [],
-  hidden = false,
-  gameStatus = "start",
-  interval = 6,
+  data: [],
+  hidden: false,
+  status: "start",
+  interval: 6,
   practice = true,
-  result = []
+  result: []
 }
 {% endhighlight %}
 
-I think that the rest of the functionality can be implemented either directly in the React components or by using a combination of the propertys in the state. For example, the next button could just trigger the same function as the action that has the interval does. The show button could just change `hidden` and maybe also change `gameStatus` to `"pause"`. If the user has pressed the show button then the value in the result should be null. That could be accomplished by looking at both `hidden` and `practice`. If they both are false, then the show button has been pressed and the time should not be stored but `null` instead.
+I think that the rest of the functionality can be implemented either directly in the React components or by using a combination of the propertys in the state. For example, the next button could just trigger the same function as the action that has the interval does. The show button could just change `hidden` and maybe also change `status` to `"pause"`. If the user has pressed the show button then the value in the result should be null. That could be accomplished by looking at both `hidden` and `practice`. If they both are false, then the show button has been pressed and the time should not be stored but `null` instead.
 
-## Final Refactoring Of React Components
+## Settings
 
-The last thing to do before I get started with Redux is to make it possible to get the data depending on what settings the user have set. The settings lives in different components and I need them all at the same time in order to fetch the correct data but the settings feel overkill to store in the state, I think only the data should live there.
+In order to get the correct data the app need to know what the settings are but I want to separate the state for the actual game and the settings:
+
+{% highlight Javascript %}
+state.game = {
+  data: [],
+  hidden: false,
+  status: "start",
+  result: []
+}
+
+state.settings = {
+  start: 0,
+  stop: 9,
+  interval: 6,
+  practice: true
+}
+{% endhighlight %}
+
+As you can se I moved `interval` and `practice` to the `settings` since that is where I think that the belong. I need `practice` in order to know whether or not the data should be shuffled.  
 
 Happy christmas!
 
