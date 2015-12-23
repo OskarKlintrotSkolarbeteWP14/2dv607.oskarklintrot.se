@@ -71,5 +71,5 @@ __________
 Tune of the day (I saw this band live in Alvesta in February 2008, it was a magic evening and they played this very song):  
 <iframe width="420" height="315" src="https://www.youtube.com/embed/VcUnbf-9oZ4" frameborder="0" allowfullscreen></iframe>
 
-Bonus song just because it's christmas tomorrow, this performance is just about a month after I saw them in Alvesta and it's the same song:
+Bonus song just because it's christmas tomorrow, it's the same song but a couple of years earlier (it was uploaded a month after I saw them in Alvesta):
 <iframe width="420" height="315" src="https://www.youtube.com/embed/32ZZF-DTDcA" frameborder="0" allowfullscreen></iframe>
