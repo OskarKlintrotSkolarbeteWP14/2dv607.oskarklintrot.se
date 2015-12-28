@@ -5,7 +5,7 @@ tags: [Javascript, Redux, Redux DevTools, Webpack]
 comments: True
 description: Sometimes you want to use different modules when developing an app and when you build it for production. In this post I will show you a practical example on how you can do it using Webpack.
 ---
-In this example we will take a look on how to exclude Redux DevTools when building an app for production. First we will have to decide weither to use NODE_ENV or pass an argument as a flag. Using NODE_ENV will give us a cleaner code in the Webpack config file but you set the NODE_ENV in different on different os. Using a flag will give you a tad more ugly looking code but is on the other hand cross-platform compatible. I always prefer cross-platform compatibility before good looking code since it's just plain stupid to do stuff in different ways on different os's.
+In this example we will take a look on how to exclude Redux DevTools when building an app for production. First we will have to decide weither to use NODE&#95;ENV or pass an argument as a flag. Using NODE&#95;ENV will give us a cleaner code in the Webpack config file but you set the NODE&#95;ENV in different on different os. Using a flag will give you a tad more ugly looking code but is on the other hand cross-platform compatible. I always prefer cross-platform compatibility before good looking code since it's just plain stupid to do stuff in different ways on different os's.
 
 ## package.json
 
@@ -18,22 +18,22 @@ My npm scripts look like this:
 }
 {% endhighlight %}
 
-If you want to use NODE_ENV it will look like this:
+If you want to use NODE&#95;ENV it will look like this:
 
 {% highlight Javascript %}
 // Windows
 "scripts": {
-  "start": "set NODE_ENV=development&&webpack-dev-server",
-  "build": "set NODE_ENV=production&&webpack --progress --colors"
+  "start": "set NODE&#95;ENV=development&&webpack-dev-server",
+  "build": "set NODE&#95;ENV=production&&webpack --progress --colors"
 }
 // Unix-like OS
 "scripts": {
-  "start": "NODE_ENV=development webpack-dev-server",
-  "build": "NODE_ENV=production webpack --progress --colors"
+  "start": "NODE&#95;ENV=development webpack-dev-server",
+  "build": "NODE&#95;ENV=production webpack --progress --colors"
 }
 {% endhighlight %}
 
-Also note that when using NODE_ENV you will have to "reset" it, as I do in the start-script.
+Also note that when using NODE&#95;ENV you will have to "reset" it, as I do in the start-script.
 
 ## webpack.config.js
 
@@ -43,10 +43,10 @@ The first thing we will do in the webpack config file is to set a const to true 
 const production = process.argv.find((element) => element === '--production') ? true : false
 {% endhighlight %}
 
-As I said, if we use NODE_ENV we will get a much cleaner code:
+As I said, if we use NODE&#95;ENV we will get a much cleaner code:
 
 {% highlight Javascript %}
-const production = process.env.NODE_ENV === 'production'
+const production = process.env.NODE&#95;ENV === 'production'
 {% endhighlight %}
 
 Now, inside our `config`-object we can use a plugin called DefinePlugin in order to set a global variable that we can use inside our source code. I know, a global variable isn't so pretty, that's one reason I still wonder if this is a hack or a bodge...
@@ -245,3 +245,4 @@ Since nothing in our `configureStore.dev` ever will be used Uglify will remove t
 __________
 
 Tune of the day:  
+<iframe width="420" height="315" src="https://www.youtube.com/embed/fcNxwkf4wuY" frameborder="0" allowfullscreen></iframe>
