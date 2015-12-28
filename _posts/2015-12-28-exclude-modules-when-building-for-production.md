@@ -23,13 +23,13 @@ If you want to use NODE&#95;ENV it will look like this:
 {% highlight Javascript %}
 // Windows
 "scripts": {
-  "start": "set NODE&#95;ENV=development&&webpack-dev-server",
-  "build": "set NODE&#95;ENV=production&&webpack --progress --colors"
+  "start": "set NODE_ENV=development&&webpack-dev-server",
+  "build": "set NODE_ENV=production&&webpack --progress --colors"
 }
 // Unix-like OS
 "scripts": {
-  "start": "NODE&#95;ENV=development webpack-dev-server",
-  "build": "NODE&#95;ENV=production webpack --progress --colors"
+  "start": "NODE_ENV=development webpack-dev-server",
+  "build": "NODE_ENV=production webpack --progress --colors"
 }
 {% endhighlight %}
 
@@ -46,7 +46,7 @@ const production = process.argv.find((element) => element === '--production') ? 
 As I said, if we use NODE&#95;ENV we will get a much cleaner code:
 
 {% highlight Javascript %}
-const production = process.env.NODE&#95;ENV === 'production'
+const production = process.env.NODE_ENV === 'production'
 {% endhighlight %}
 
 Now, inside our `config`-object we can use a plugin called DefinePlugin in order to set a global variable that we can use inside our source code. I know, a global variable isn't so pretty, that's one reason I still wonder if this is a hack or a bodge...
