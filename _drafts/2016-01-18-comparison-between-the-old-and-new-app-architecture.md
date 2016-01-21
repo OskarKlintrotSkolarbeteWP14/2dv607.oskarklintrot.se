@@ -27,7 +27,7 @@ As you can see it would just be horrendous to look at. Using `React-Redux` it is
 
 ### Render Game Sequence Diagram
 
-The following sequence diagram is for rendering a single game. `Tile` is a child component to `StartPage` and each `Tile` is mapped to a game from Data. 
+The following sequence diagram is for rendering a single game. `Tile` is a child component to `StartPage` and each `Tile` is mapped to a game from Data. When the link is clicked React-Router routes the user to the `Game` component along with the parameters from the link, telling the `Game` component which game to render. Then it gets the data for that game from `Games` in the Model for rendering the title etc and the first pair from `GetMnemonicImages` for rendering placeholders for the user to see before starting the game.
 
 ![Render game sequence diagram](https://raw.githubusercontent.com/OskarKlintrotSkolarbeteWP14/2dv607.oskarklintrot.se/gh-pages/public/pics/uml/new/NewRenderGameUMLSequenceDiagram.png)
 
